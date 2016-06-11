@@ -1,0 +1,33 @@
+.signup-form-block {
+	display: block;
+	margin: 6px auto;
+	width: 100%;
+	max-width: 270px;
+}
+
+.signup-form-block-input {
+	width: 100%;
+	input {
+		width: 100%;
+		background-color: rgba(255,255,255,0.5);
+		padding-left:10px;
+	}
+}
+
+.signup-form-error {
+	margin: 25px 0 10px 0;
+	font-weight: bold;
+	color: $main-color-dark;
+	animation: signup-form-error-opacity 0.25s;
+}
+
+@keyframes signup-form-error-opacity {
+    from {
+    	height: 0; 
+    	opacity: 0;
+    }
+    to {
+    	opacity: 1;
+    	height: 14px;
+    }
+}

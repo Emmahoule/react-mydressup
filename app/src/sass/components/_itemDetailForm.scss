@@ -1,0 +1,66 @@
+.item-detail-form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	align-items: stretch;
+}
+
+.item-detail-form-left,
+.item-detail-form-right  {
+	vertical-align: top;
+	display: inline-block;
+	font-size: $text-size;
+	padding: 0 10px;
+}
+
+.item-detail-form-left {
+	flex: 3;
+	.add-item-form-block-field {
+		max-width: 300px;
+	}
+}
+
+.item-detail-form-right {
+	// color: $black;
+	flex: 4;
+}
+
+.item-detail-form-info {
+	padding: 17px 0;
+	color: $dark-gray;
+	// &:hover {
+	// 	background-color: $v-light-gray;;
+	// }
+}
+
+.item-detail-form-info-title {
+	font-size: 30px;
+	font-weight: 300;
+	color: $dark-gray;
+	font-family: $title-font;
+	// text-transform: uppercase;
+}
+
+.item-detail-form-img-container {
+	max-width: 380px;
+	max-height: 380px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.item-detail-form-img {
+	max-height: 380px;
+	max-width: 380px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.item-detail-form-info-color-rect {
+	width: 25px;
+	height: 25px;
+	margin: 0 5px 0 5px;
+	border-radius: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}

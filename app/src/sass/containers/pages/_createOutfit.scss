@@ -1,0 +1,19 @@
+// .app-create-outfit-collage, .app-create-outfit-items {
+// 	display: inline-block;
+// 	vertical-align: top;
+// }
+
+.app-create-outfit-collage {
+	// width: 30%;
+	position: fixed;
+}
+
+.app-create-outfit-items {
+	position: absolute;
+	left: 390px;
+	right: 50px;
+	top: 0;
+	// width: 60%;
+	// margin-left: 330px;
+	// position: absolute;
+}

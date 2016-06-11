@@ -1,0 +1,26 @@
+.login-form-block {
+	display: block;
+	margin: 10px auto;
+	width: 100%;
+	max-width: 270px;
+}
+
+.login-form-block-input input {
+	width: 100%;
+	background-color: rgba(255,255,255,0.5);
+	padding-left:10px;
+}
+
+.login-form-block-resetpass {
+	padding-top: 5px;
+	display: block;
+}
+
+.login-form-block-resetpass {
+	margin-top: 5px;
+	text-decoration: none;
+}
+
+.login-form-btn {
+	margin: 20px auto 25px auto;
+}

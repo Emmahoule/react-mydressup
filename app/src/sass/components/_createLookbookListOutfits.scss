@@ -1,0 +1,100 @@
+.create-lookbook-list-outfit {
+	display: inline-block;
+	box-sizing: border-box;
+	font-size: 0px;
+	line-height: 0;
+	width: 20%;
+	min-width: 200px;
+	height: 300px;
+	vertical-align: top;
+	margin: 10px;
+	position: relative;
+}
+
+.create-lookbook-list-outfit-link {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 2px solid $white;
+	cursor: pointer;
+	transition: border 1s $easeOutQuart;
+	text-align: center;
+	&.selected {
+		border: 2px solid $main-color;
+		&:after,&:before {
+			opacity: 1;
+		}
+		&:hover {
+			border: 2px solid $second-color;
+		}
+	}
+	&:before {
+		content: "";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		border: 1px solid $light-gray;
+		display: block;
+		opacity: 0;
+		background-color: $white;
+		transition: opacity 1s $easeOutQuart;
+	}
+	&:after {
+		content: "✔";
+		position: absolute;
+		top: 22px;
+		right: 14px;
+		font-size: 16px;
+		color: $second-color;
+		display: block;
+		opacity: 0;
+		transition: opacity 1s $easeOutQuart;
+	}
+	&:hover {
+		border: 2px solid $light-gray;
+	}
+}
+
+.create-lookbook-list-outfit-link-img {
+	transition: opacity 1s $easeOutQuart;
+	opacity: 1;
+	width: 100% ;
+	height: 100%;
+	max-height: 300px;
+	max-width: 200px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	padding: 10px 15px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.create-lookbook-list-outfit-link-more {
+	transition: opacity 1s $easeOutQuart;
+	opacity: 0;
+	width: 40px;
+	height: 40px;
+	color: $main-color;
+	text-align: center;
+	font-size: 45px;
+	line-height: 40px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	font-weight: 200;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.create-lookbook-name-field {
+	font-size: 20px;
+}
+
+.lookbook-outfits-list-block-name {
+	margin-bottom: 40px;
+}

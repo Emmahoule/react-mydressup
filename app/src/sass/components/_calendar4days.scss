@@ -1,0 +1,98 @@
+.calendar-4days-block {
+	width: 25%;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	&:last-child {
+		border-right: 0px;
+	}
+}
+
+.calendar-4days-block-top {
+	border-bottom: 1px solid $light-gray;
+	padding: 20px 0;
+}
+
+.calendar-4days-block-top-day {
+	font-family: $title-font;
+	color: $main-color;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.calendar-4days-block-top-meteo {
+	font-size: 30px;
+	color: $main-color;
+}
+
+.calendar-4days-block-bottom {
+	padding: 20px 0;
+	position: relative;
+}
+
+.calendar-4days-block-bottom-outfit img {
+	width: 100%;
+	max-width: 150px;
+	margin: 0 auto;
+}
+
+.calendar-4days-block-bottom-delete {
+	// height: 100px;
+	padding: 20px;
+}
+
+.calendar-4days-block-bottom-delete-icon {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	padding: 5px;
+	fill: $main-color;
+	transition: fill 0.5s $easeInOutQuad;
+	cursor: pointer;
+	&:hover {
+		fill: $second-color;
+	}
+}
+
+.calendar-4days-block-bottom-delete-link {
+	border: 1px solid $main-color;
+	border-radius: 100px;
+}
+
+.calendar-4days-block-bottom-add {
+	position: absolute;
+	left: 50%;
+	display: block;
+	font-weight: 300;
+	top: 50%;;
+	cursor: pointer;
+	color: $main-color;
+	transform: translate(-50%, -50%);
+}
+.calendar-4days-block-bottom-add-icn {
+	font-size: 80px;
+	display: block;
+	margin-bottom: 30px;
+	transition: transform 0.5s $easeOutQuad;
+	&:hover {
+		transform:  scale(1.15);
+	}
+}
+
+.calendar-4days-block-bottom-add-text {
+	font-family: $title-font;
+	font-size: 16px;
+	line-height: auto;
+}
+
+.calendar-4days-block-bottom-add-outfit {
+	height: 300px;
+}
+
+.calendar-4days-block-bottom-outfit {
+	transition: transform 1s $easeOutQuart;
+	display: block;
+	&:hover {
+		transform: translate(0, -10px);
+		}
+}

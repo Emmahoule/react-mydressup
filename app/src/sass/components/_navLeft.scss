@@ -1,0 +1,81 @@
+.navleft {
+	width: 120px;
+	border-right: 1px solid $light-gray;
+	height: 100%;
+	position: fixed;
+	top: 55px;
+	bottom: 0;
+	background-color: $main-color-dark;
+}
+
+.navleft-block-item {
+	display: block;
+	height: 120px;
+	position: relative;
+	border-bottom: 1px solid #6f5468;
+}
+
+.navleft-block-item-link {
+	width: 100%;
+	height: 100%;
+	font-weight: 300;
+	font-size: 16px;
+	position: absolute;
+	color: #cfbcc8;
+	text-decoration: none;
+	text-align: center;
+	transition: color 0.5s $easeOutQuart, border 0.5s $easeOutQuart;
+	&:before {
+		content:"";
+		display: block;
+		background-color: #41313d;
+		height: 100%;
+		width: 0px;
+		position: absolute; 
+		top: 0;
+		transition: width 0.5s $easeOutQuart, background-color 0.5s $easeOutQuart;
+	}
+
+	&:hover, &:focus, &.active {
+		&:before {
+			width: 120px;
+		} 
+	}
+	&.active {
+		color: $white;
+		.navleft-block-item-icon {
+			transform: translate(0, -2px);
+			color: $white;
+		}
+		&:before {
+			background-color: $main-color;
+		}
+		
+	}
+}
+
+.navleft-block-item-link-inner {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 120px;
+}
+
+.navleft-block-item-icon {
+	width: 80px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 7px;
+	color: #cfbcc8;
+	transform: translate(0, 3px);
+	transition: transform 0.5s $easeOutQuad, color 0.5s $easeOutQuad;
+}
+
+.navleft-block-item-icon-outfit {
+	height: 55px;
+}
+
+.navleft-block-item-icon-lookbook {
+	height: 60px;
+}

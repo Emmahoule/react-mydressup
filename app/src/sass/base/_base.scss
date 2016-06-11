@@ -1,0 +1,390 @@
+body {
+	font-family: $text-font;
+	color: $text-color;
+	font-size: $text-size;
+	font-weight: 300;
+	line-height: 1.5em;
+	background-color: $v-light-gray;
+}
+
+.wrapper {
+	margin: 0 auto;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+.i-block {
+	display: inline-block;
+}
+
+input, textarea{
+	border: 1px solid $light-gray;
+	// padding: 12px 12px;
+	padding: 12px 0;
+	box-sizing: border-box;
+	//border-box: 2px;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	transition: border-color 1.5s $easeOutExpo, background 1s $easeOutExpo;
+	background-image: repeating-linear-gradient(90deg, $main-color, $main-color 10px);
+	background-size: 0px 1px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	// background: rgba(255,255,255, 0);
+
+}
+
+// input[type="text"], input[type="password"] {
+// 	background-color: rgba(255,255,255, 0);
+// }
+
+
+input:focus, textarea:focus {
+	border-color: $white;
+	background-size: 100% 1px;
+}
+
+select:focus {
+	border-color: $main-color;
+}
+
+textarea {
+	height: 45px;
+}
+
+select {
+	background-color: $white;
+	padding: 0px 8px;
+	border: 1px solid $light-gray;
+	height: 44px;
+	line-height: 44px;
+	transition: border-color 1s $easeOutExpo;
+	color: $dark-gray;
+	appearance: none;
+  	border-radius: 0 4px 4px 0;
+  	vertical-align: middle;
+  	margin-top: -2px;
+  	box-sizing: border-box;
+  	width: 100%;
+	max-width: 200px;
+	cursor: pointer;
+	&:after {
+		content:"v";
+		position: absolute;
+		right: 10px;
+		z-index: 99;
+		color: blue;
+	}
+}
+
+.label-select {
+	background-color: $v-light-gray;
+	height: 44px;
+	line-height: 41px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	border-radius: 4px 0 0 4px;
+	border-top: 1px solid $light-gray;
+	border-left: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+	font-size: 16px;
+	width: 140px;
+	display: inline-block;
+	position: relative;
+	transition: background-color 1s $easeOutExpo, color 1s $easeOutExpo;
+}
+
+.select-box {
+	position: relative;
+	width: 100%;
+	color: $light-gray;
+	max-width: 340px;
+	&.selected {
+		.select-box-arrow:after, .select-box-arrow:before {
+			transition: background-color 1s $easeOutExpo;
+			background-color: $main-color;
+		}
+		.label-select {
+			transition: background-color 1s $easeOutExpo, color 1s $easeOutExpo, border-color 1s $easeOutExpo;
+			background-color: $main-color;
+			color: $white;
+			border-color: $main-color;
+		}
+	}
+}
+
+.select-box-arrow {
+	display: inline-block;
+	height: 100%;
+	position: absolute;
+	right: 25px;
+	line-height: 44px;
+	transition: background-color 1s $easeOutExpo;
+	&:after {
+		content: "";
+		width: 1px;
+		height: 15px;
+		display: block;
+		background-color: $light-gray;
+		transform: rotate(45deg) translate(0, -50%);
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
+	&:before {
+		content: "";
+		width: 1px;
+		height: 15px;
+		display: block;
+		background-color: $light-gray;
+		transform: rotate(-45deg) translate(0, -50%);
+		position: absolute;
+		right: 0px;
+		top: 50%;
+	}
+	&:hover {
+
+	} 
+}
+.error input, .error textarea {
+	background-image: repeating-linear-gradient(90deg, $red, $red 10px);
+}
+
+.error select {
+	border-bottom: 1px solid $red;
+}
+
+.validation-error.error  {
+	// background-color: $main-color-dark;
+	display: block;
+	color: $red;
+	padding: 5px 0;
+	height: 40px;
+	opacity: 1;
+	font-weight: 400;
+	// animation: validation-error-anim 1s forwards; 
+}
+
+.validation-error {
+	overflow:hidden;
+	transition: all 1s $easeOutExpo;
+	height: 0;
+}
+
+.form-error {
+	margin: 25px 0 10px 0;
+	font-weight: 400;
+	color: $red;
+	animation: login-form-error-opacity 0.25s;
+}
+
+@keyframes login-form-error-opacity {
+    from {
+    	height: 0; 
+    	opacity: 0;
+    }
+    to {
+    	opacity: 1;
+    	height: 14px;
+    }
+}
+
+.btn1 {
+	padding: 0 20px;
+	font-family: $title-font;
+	border: 0px;
+	//border-radius: 2px;
+	font-size: $text-size;
+	cursor: pointer;
+	transition: color 1s $easeOutExpo, background-color 1s $easeOutExpo;
+	text-decoration: none;
+	font-weight: 300;
+	background-color: $second-color;
+	color: $white;
+	line-height: 50px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	z-index:10;
+	&:hover {
+		color: $white;
+		background-color: $main-color;
+	}
+}
+
+button.btn1{
+	background-color: $second-color;
+}
+
+.btn2 {
+	padding: 0 30px;
+	font-family: $title-font;
+	border-radius: 20px;
+	font-size: $text-size;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: 300;
+	border: 1px solid $main-color;
+	color: $main-color;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	transition: padding 1s $easeOutExpo;
+	&:before, &:after {
+		content:"";
+		height: 1px; 
+		width: 0;
+		background-color: $main-color;
+		display: block;
+		position: absolute;
+		top: 50%;
+	} 
+	&:before {
+		left: 10px;
+		transition: width 1s $easeOutExpo;
+	}
+	&:after {
+		right: 10px;
+		transition: width 1s $easeOutExpo;
+	}
+	&:hover {
+		// color: $white;
+		// padding-right: 25px;
+		// padding-left: 35px;
+		&:before, &:after {
+			width: 15px;
+		}
+	}
+}
+
+
+a {
+	text-decoration: none;
+	font-weight: 400;
+	color: $main-color;
+	text-decoration: none;
+}
+
+.underline-hover {
+	text-decoration: none;
+	font-weight: 400;
+	color: $main-color;
+	// text-decoration: underline;
+	display: inline-block;
+	position: relative; 
+	&:after {
+		content:"";
+		display: block;
+		height: 1px;
+		width: 0px;
+		background-color: $main-color;
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		transition: width 1s $easeInOutQuart;
+	}
+	&:hover:after {
+		width: 100%;
+	}
+}
+
+strong {
+	font-weight: bold;
+	font-color: $main-color;
+}
+
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+}
+
+.c-black {
+	color: $black;
+}
+
+.c-gray {
+	color: $gray;
+}
+
+.c-main {
+	color: $main-color;
+	font-weight: 600;
+	font-family: $title-font;
+}
+
+.c-second {
+	color: $second-color;
+	font-weight: 600;
+	font-family: $title-font;
+}
+
+
+.c-gray-dark {
+	color: $dark-gray;
+}
+
+.c-secondcolor-dark {
+	color: $second-color-dark;
+}
+
+.c-secondcolor-light {
+	color: $second-color-light;
+}
+.hidden {
+	display: none;
+}
+
+
+
+
+
+
+// .btn-test{
+// 	// background-color: $second-color;
+// 	padding: 5px 30px;
+// 	border: 1px solid $main-color;
+// 	border-radius: 25px;
+// 	display: inline-block;
+// 	z-index: 10;
+// 	text-align: center;
+// 	font-family: $title-font;
+// 	color: $white;
+// 	margin: 0 auto;
+// 	position: absolute;
+// 	left: 50%;
+// 	transform: translate(-50%, 0);
+// 	top: 35px;
+// 	text-align: center;
+// 	color: $main-color;
+// 	// &:after {
+// 	// 	content: "";
+// 	// 	display: block;
+// 	// 	height: 1px;
+// 	// 	// width: 400px;
+
+// 	// 	background-color: $second-color;
+// 	// }
+// }
+
+// // .line {
+// // 	position: absolute;
+// // 	top: 48px;
+// // 	height: 1px;
+// // 	z-index: 0;
+// // 	width: 68%;
+// // 	left:40px;
+// // 	// transform: translate(-50%, 0);
+// // 	background-color: $light-gray;
+// // }
+
+// .app-topbar {
+// margin-top: 120px !important;
+// }
+
+
+

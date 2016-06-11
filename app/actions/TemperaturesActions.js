@@ -1,0 +1,20 @@
+export const FETCH_TEMPERATURES_REQUEST = 'FETCH_TEMPERATURES_REQUEST'
+export const FETCH_TEMPERATURES_SUCCESS = 'FETCH_TEMPERATURES_SUCCESS'
+export const FETCH_TEMPERATURES_FAILURE = 'FETCH_TEMPERATURES_FAILURE'
+
+export const FETCH_TEMPERATURES_USER_REQUEST = 'FETCH_TEMPERATURES_USER_REQUEST'
+export const FETCH_TEMPERATURES_USER_SUCCESS = 'FETCH_TEMPERATURES_USER_SUCCESS'
+export const FETCH_TEMPERATURES_USER_FAILURE = 'FETCH_TEMPERATURES_USER_FAILURE'
+
+import { CALL_API } from '../middleware/api'
+import { config } from '../config.js'
+
+export function fetchTemperatures() {
+  return {
+    [CALL_API]: {
+      endpoint: '/api/v1/temperature/',
+      authenticated: true,
+      types: [FETCH_TEMPERATURES_REQUEST, FETCH_TEMPERATURES_SUCCESS, FETCH_TEMPERATURES_FAILURE]
+    }
+  }
+}

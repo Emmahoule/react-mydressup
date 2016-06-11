@@ -1,0 +1,45 @@
+.create-outfit-infos-block {
+	padding: 60px 0;
+	border-bottom: 1px solid $light-gray;
+	&:last-child {
+		border-bottom: 0px solid $white;
+	}
+}
+
+.create-outfit-infos-block-title {
+	display: inline-block;
+	font-family: $title-font;
+	color: $main-color;
+	font-size: 18px;
+	width: 25%;
+}
+
+.create-outfit-infos-block-item  {
+	vertical-align: middle;
+	display: inline-block;
+	width: 18.75%;
+	text-align: center;
+	transition: color 0.75s $easeInOutQuad;
+	cursor: pointer;
+	span {
+		display: block;
+	}
+	&:hover {
+		color: $main-color;
+		.create-outfit-infos-block-item-icon {
+			transform: translate(0,-5px);
+		}
+	}
+	&.selected {
+		color: $second-color;
+		.create-outfit-infos-block-item-icon {
+			transform: translate(0,-5px);
+		}		
+	}	
+}
+
+.create-outfit-infos-block-item-icon {
+	transition: transform 0.75s $easeOutExpo;
+	width: 80px;
+	height: 40px;
+}

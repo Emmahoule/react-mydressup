@@ -1,0 +1,70 @@
+.collage-outfit {
+  border: 1px dashed $light-gray;
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  border-top: 2px solid $second-color;
+}
+
+
+.collage-outfit-item{
+	position: absolute;
+  	background-color: white;
+  	cursor: move;
+  	transition: border 1s $easeOutQuart;
+  	border: 1px dashed $white;
+  	&:hover {
+  		border: 1px dashed gray;
+  		.react-resizable-handle {
+  			display: block;
+  		}
+  	}
+}
+
+.react-resizable {
+  position: relative;
+}
+
+.react-resizable-handle {
+	display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: -10px;
+  right: -10px;
+  z-index: 10;
+  cursor: se-resize;
+  background-color: rgba(255,255,255,0.6);
+  transition: background-color 1s $easeOutQuart;
+
+  &:after, &:before {
+  	content:"";
+  	position: absolute;
+  	display: block;
+  	width: 15px;
+  	height: 15px;
+  }
+
+  &:before {
+    border-left: 2px solid $second-color;
+    border-top: 2px solid $second-color;
+    left: 0;
+    top: 0;
+  }
+
+  &:after {
+    border-bottom: 2px solid $second-color;
+    border-right: 2px solid $second-color;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+.collage-outfit-item-img {
+  width: 100%;
+}
+
+.collage-outfit-guidelines {
+  padding: 30px;
+  text-align: center;
+}

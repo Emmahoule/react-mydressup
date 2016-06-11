@@ -1,0 +1,59 @@
+.outfit-detail-block {
+	padding: 60px 0;
+	border-bottom: 1px solid $light-gray;
+	&:last-child {
+		border-bottom: 0px solid $white;
+	}
+}
+
+.outfit-detail-block-title {
+	display: inline-block;
+	font-family: $title-font;
+	color: $main-color;
+	font-size: 18px;
+	width: 25%;
+}
+
+.outfit-detail-form-img-container {
+	width: 100%;
+}
+
+
+.outfit-detail-form-img {
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+.outfit-detail-block-item  {
+	vertical-align: middle;
+	display: inline-block;
+	width: 18.75%;
+	text-align: center;
+}
+
+.outfit-detail-block-item-icon {
+	width: 80px;
+	height: 40px;
+}
+
+.outfit-detail-form-social {
+	text-align: left;
+	margin: 0 auto;
+	// margin-top: 40px;
+}
+.outfit-detail-form-social-link {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: $title-font;
+	svg {
+		width: 25px;
+		height: 25px;
+		margin: 4px;
+		transition: fill 0.75s $easeOutExpo, transform 0.75s $easeOutExpo;	
+		fill: $main-color;
+		&:hover {
+			fill: $second-color;
+			transform: translate(0, -5px);
+		}	
+	}
+}

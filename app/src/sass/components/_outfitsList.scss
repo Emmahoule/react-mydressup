@@ -1,0 +1,32 @@
+.outfits-list-block {
+	display: block;
+	margin: 0 0 40px 0;
+	background-color: $white;
+	padding: 0;
+}
+
+.outfits-list-block-occasion {
+	font-size: 18px;
+	position: relative;
+	display: block;
+	font-family: $title-font;
+	padding: 30px 40px 25px 40px;
+	color: $dark-gray;
+	overflow: hidden;
+	position: relative;
+	background-color: $white;
+	border-bottom: 1px solid $light-gray;
+	cursor: pointer;
+	transition: background-color 1s $easeOutExpo;
+	&:hover {
+		background-color: $v-light-gray;
+	}
+}
+
+.outfits-list-block-occasion-items {
+	overflow: hidden;
+}
+
+.items-list-block-occasion-items-inner {
+	margin: 40px;
+}

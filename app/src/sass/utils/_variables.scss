@@ -1,0 +1,62 @@
+/*******************************//* -------- VARIABLES -------- */
+/*******************************/
+
+$break-vxsmall: 460px;
+$break-xsmall: 680px;
+$break-small: 760px;
+$break-medium: 980px;
+$break-large: 1150px;
+
+$large-wrapper : 1200px;
+
+/* -------- SIZES -------- */
+
+$contentW:960px;
+$contentH:100%;
+$contentMinW:980px;
+$contentMinH:600px;
+
+$text-size: 16px;
+
+/* -------- COLORS -------- */
+
+$white:#fff;
+$black:#000;
+$red: #da4669;
+$gray:#888;
+$light-gray:#e7e7e7;
+$v-light-gray:#F9F9FB;
+$dark-gray: #545353;
+$peach:#fe7272;
+
+$main-color-light: #bb8daf;
+$main-color: #9e7794;
+$main-color-dark: #5d4657;
+
+$second-color: #da4669;
+$second-color-dark: #963048;
+$second-color-light: #ffa4b5;
+
+
+// $second-color-light: #bb8daf;
+// $second-color: #9e7794;
+// $second-color-dark: #75516C;
+
+// $main-color: $red;
+// $main-color-dark: #b83b59;
+// $main-color-light: #fc627b;
+
+$text-color: $gray;
+
+$bgSelection:$black;
+$textSelection:$white;
+$alt1:$white;
+$alt2:$black;
+$alt3:$peach;
+$alt4:$gray;
+
+/* -------- FONTS -------- */
+
+$text-font: Lato;
+$italiana: Italiana;
+$title-font: $italiana;

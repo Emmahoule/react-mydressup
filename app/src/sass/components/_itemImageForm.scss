@@ -1,0 +1,65 @@
+.item-image-form-cropper, .item-image-form-upload {
+	position: relative;
+	max-width: 380px;
+	width: 100%;
+	height: 380px;
+	margin: 0 auto;
+	// animation: 1s opacity forwards;
+}
+
+// @keyframes opacity {
+//     from {opacity: 0;}
+//     to {opacity: 1;}
+// }
+
+.item-image-form-cropper {
+	text-align: center;
+}
+
+.item-image-form-cropper-btn {
+	display: inline-block;
+	margin: 30px auto;
+}
+
+.item-image-form-upload-dropzone {
+	cursor: pointer;
+	box-sizing: border-box;
+	border: 2px dashed $light-gray;
+	width: 100%;
+	max-width: 380px;
+	height: 380px;
+	margin: 0 auto;
+	background: url('/html/src/img/default_img.png') center center;
+	background-size: 100%;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	transition: border-color 1s $easeOutQuart;
+	&:hover {
+		border-color: $main-color;
+	}
+}
+
+
+.item-image-form-upload-dropzone-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 85%;
+	transform: translate(-50%, -50%);
+}
+
+.item-image-form-upload-field {
+	width: 100%;
+	margin: 30px auto;
+	padding: 0;
+	max-width: 250px;
+	input, textarea {
+		display: block;
+		width: 100%;
+	}
+	label {
+		font-size: 16px;
+	}
+} 
+

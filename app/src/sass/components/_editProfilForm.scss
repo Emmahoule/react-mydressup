@@ -1,0 +1,129 @@
+.edit-profil-form-left, .edit-profil-form-right {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.edit-profil-form-block {
+	display: block;
+	margin: 6px 0;
+	width: 100%;
+	max-width: 270px;
+}
+
+.edit-profil-form-block-input {
+	width: 100%;
+	margin-bottom: 30px;
+	input {
+		width: 100%;
+	}
+}
+
+.edit-profil-form-error {
+	margin: 25px 0 10px 0;
+	font-weight: bold;
+	color: $main-color-dark;
+	animation: edit-profil-form-error-opacity 0.25s;
+}
+
+@keyframes edit-profil-form-error-opacity {
+    from {
+    	height: 0; 
+    	opacity: 0;
+    }
+    to {
+    	opacity: 1;
+    	height: 14px;
+    }
+}
+
+
+.edit-profil-form-upload-dropzone {
+	cursor: pointer;
+	box-sizing: border-box;
+	border: 2px dashed $light-gray;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	margin: 0 auto;
+	background: url('/html/src/img/default_img.png') center center;
+	background-size: 100%;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	transition: border-color 1s $easeOutQuart;
+	&:hover {
+		border-color: $main-color;
+	}
+}
+
+.edit-profil-form-upload-dropzone-text {
+	margin-top: 30px;
+}
+.edit-profil-form-img-container {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	border-radius: 200px;
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.edit-profil-form-img {
+	// width: 200px;
+	height: 200px;
+	border: 1px solid $light-gray;
+	text-align: center;
+	display: block;
+}
+
+.edit-profil-form-right {
+	text-align: center;
+}
+
+.edit-profil-form-right-title {
+	font-size: 24px;
+	font-family: $title-font;
+	color: $dark-gray;
+	padding: 0px 0 20px 0;
+	margin: 0px auto 20px auto;
+	position: relative;
+	&:after {
+		width: 60px;
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -30px;
+		display: block;
+		content: "";
+		background-color: $second-color;
+	}
+}
+
+.edit-profil-form-right-username {
+	color: $main-color;
+	font-size: 18px;
+	font-family: $title-font;
+	font-weight: 600;
+	padding: 20px;
+}
+
+.edit-profil-form-edit {
+	color: $main-color;
+	vertical-align: middle;
+	.icon-edit {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}
+
+
+.edit-profil-form-edit-text {
+	display: inline-block;
+	vertical-align: middle;
+}

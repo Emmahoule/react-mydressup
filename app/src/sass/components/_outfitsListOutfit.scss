@@ -1,0 +1,78 @@
+.outfits-list-item {
+	display: inline-block;
+	// padding: 10px;
+	box-sizing: border-box;
+	font-size: 0px;
+	line-height: 0;
+	width: 25%;
+	height: auto;
+}
+
+.outfits-list-item-link {
+	max-width: 200px;
+	max-height: 320px;
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	transition: transform 1s $easeOutQuart;
+	&:hover {
+		transform: translate(0, -10px);
+		.outfits-list-item-link-more  {
+			transform: translate(-50%, -50%);
+
+		}
+	}
+}
+
+.outfits-list-item-link-img {
+	transition: opacity 1s $easeOutQuart;
+	opacity: 1;
+	width: 200px;
+	height: 320px;
+	margin: 0 auto;
+}
+
+.outfits-list-item-link-more {
+	transition: opacity 1s $easeOutQuart;
+	opacity: 0;
+	width: 40px;
+	height: 40px;
+	color: $main-color;
+	text-align: center;
+	font-size: 45px;
+	line-height: 40px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	font-weight: 200;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.outfits-list-item-add {
+	width: 200px;
+	height: 320px;
+	position: relative;
+}
+
+.outfits-list-item-add-inner {
+	position: absolute;
+	font-size: 75px;
+	width: 100px;
+	color: $main-color;
+	line-height: 100px;
+	height: 100px;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transition: transform 0.5s $easeOutQuart;
+	z-index: 999;
+	overflow: hidden;
+	font-weight: 200;
+	&:hover {
+		transform: translate(-50%,-50%) scale(1.2);
+	}
+}

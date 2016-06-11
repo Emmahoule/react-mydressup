@@ -1,0 +1,37 @@
+.page-section-title-title {
+	position: relative;
+	font-size: 30px;
+	font-family: $title-font;
+	color: $dark-gray;
+	line-height: 90px;
+	// color: $main-color;
+	&:after {
+		content:"";
+		display: block;
+		height: 1px;
+		width: 100px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		background-color: $dark-gray;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.page-section-title-baseline {
+	margin-top: 30px;
+	font-size: 20px;
+	color: $main-color;
+}
+
+.page-section {
+	padding: 80px 0;
+}
+
+.page-section-title {
+	font-family: $title-font;
+	color: $main-color;
+	font-size: 22px;
+	line-height: 1.5em;
+	margin-bottom: 30px;
+}

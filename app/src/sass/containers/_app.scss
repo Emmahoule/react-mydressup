@@ -1,0 +1,276 @@
+@import "pages/all";
+
+.app-container {
+	top: 55px;
+	padding: 0px 50px 50px 50px;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	position: absolute;
+	left: 120px;
+	right: 0;
+	bottom: 0;
+	background-color: $v-light-gray;
+}
+
+.app-entry {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: $main-color;
+	z-index: 999;
+}
+
+.app-entry-text {
+	color: $white;
+	font-family: $title-font;
+	font-size: 30px;
+	top: 50%;
+	font-weight: 300;
+	position: absolute;
+	left: 50%;
+	transform:translate(-50%, -50%);
+}
+
+.app-block {
+	background-color: $white;
+	border: 1px solid $light-gray;
+	border-top: 2px solid $red;
+	padding: 40px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.app-top-tools {
+	display: block;
+	width: 100%;
+	height: 50px;
+	margin: 20px 0 0 0;
+}
+
+.app-top-tools-right {
+	float: right;
+}
+
+.app-top-tools-right-btn {
+	margin-left: 1px;
+	// line-height: 45px;
+}
+
+.app-top-tools-right-btn-delete {
+	width: 80px;
+	transition: background-color 1s $easeOutExpo, width 1s $easeOutExpo;
+	white-space: nowrap;
+	transform-origin: 50% 50%;
+	&.delete-validation {
+		width: 141px;
+		background-color: $main-color;
+		transition: background-color 1s $easeOutExpo, width 1s $easeOutExpo;
+		transform-origin: 50% 50%;
+		&:hover {
+			background-color: $main-color-dark;
+		}
+	}
+}
+
+.btn-back-to {
+	color: $main-color;
+	position: relative;
+	top: 10px;
+	font-family: $title-font;
+	padding-left: 28px;
+	transition: transform 1s $easeOutExpo;
+	&:hover {
+		transform: translate(-3px, 0);
+		.btn-back-to-arrow {
+			transform: translate(-7px, 0);
+			width: 25px;
+		}
+	}
+}
+
+.btn-back-to-arrow {
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	width: 18px;
+	height: 1px;
+	background-color: $main-color;
+	transition: transform 1s $easeOutExpo, width 1s $easeOutExpo;
+	top: 50%;
+	&:after, &:before {
+		background-color: $main-color;
+		height: 1px;
+		width: 10px;
+		content: "";
+		display: block;
+		position: absolute;
+		left: -1px;
+	}
+	&:before {
+		top: -4px;
+		transform: rotate(-45deg);
+
+	}
+	&:after {
+		top: 4px;
+		transform: rotate(45deg);
+	}
+}
+
+.app-topbar {
+	display: inline-block;
+	height: 50px;
+	position: relative;
+	margin-top: 40px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.app-topbar-right {
+	float: right;
+	overflow: hidden;
+}
+
+.app-topbar-left {
+	float: left;
+	// overflow: hidden;
+}
+
+
+.app-topbar-right-btn {
+	
+}
+
+.app-topbar-filter-title {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.app-topbar-filter-item {
+	font-family: $italiana;
+	display: inline-block;
+	width: 160px;
+	height: 100%; 
+	line-height: 50px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	transition: background-color 0.5s, color 0.5s;
+	cursor: pointer;
+	&:hover {
+		background-color: $light-gray;
+		// color: $white;
+		&.app-topbar-filter-select:after, &.app-topbar-filter-select:before {
+			background-color: $main-color;
+		}
+	}
+}
+
+.app-topbar-filter-select {
+	background-color: $white;
+	color: $dark-gray;
+	margin: 0 5px;
+	position: relative;
+	border-bottom:1px solid $light-gray;
+	height: 100%;
+	&:after {
+		position: absolute;
+		display: block;
+		content:"";
+		top: 50%;
+		width: 14px;
+		height: 1px;
+		right: 15px;
+		background-color: $light-gray;
+		transform: rotate(-45deg);
+		transition: background-color 0.5s;
+	}
+	&:before {
+		position: absolute;
+		display: block;
+		content:"";
+		top: 50%;
+		right: 25px;
+		width: 14px;
+		height: 1px;
+		background-color: $light-gray;
+		transform: rotate(45deg);
+		transition: background-color 0.5s;
+	}
+}
+
+.app-topbar-filter-select-list {
+	display: block;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	z-index: 99;
+	height: 200px;
+	width: 220px;
+	background-color: $white;
+	border: 1px solid $light-gray;
+	overflow: scroll;
+	transition: height 1s $easeOutExpo;
+	&.visible {
+		height: 200px;
+		// opacity: 1;
+	}
+	&.hidden {
+		height: 0px;
+		visibility: hidden;
+		// opacity: 0;
+	}
+}
+
+.app-topbar-filter-select-list-option {
+	display: block;
+	transition: background-color 0.5s;
+	padding: 0 10px;
+	// border-bottom: 1px solid $light-gray;
+	&:hover {
+		background-color: $v-light-gray;
+	}
+}
+
+.app-topbar-filter-select-list-color {
+	width: 20px; 
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 15px;
+	background-color: $main-color;
+	display: inline-block;
+	// border-radius: 20px;
+}
+
+.app-block-search {
+	background-color: $white;
+	// padding: 5px 25px 10px 25px;
+	border-bottom: 1px solid $light-gray;
+	display: inline-block;
+}
+
+.app-block-search-icon {
+	width: 20px;
+	height: 20px;
+	margin-top: -5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-right: 1px solid $light-gray;
+	color: $main-color;
+	// margin-right: 20px;
+	vertical-align: middle;
+}
+
+
+.app-block-search-input {
+	// font-size: 17px;
+	width: 300px;
+	// margin-left: 20px;
+	font-family: $title-font;
+	border-bottom: 0px;
+	padding-left: 20px;
+	padding-bottom: 14px;
+	// background-color: transparent;
+}

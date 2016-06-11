@@ -1,0 +1,73 @@
+.homepage-section-social {
+	text-align: center;
+	color: $white;
+	font-family: $title-font;
+	font-size: 18px;
+	padding: 30px 0;
+} 
+
+.homepage-section-social-networks-link {
+	margin: 0 20px 0 20px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	color: white;
+	.icon {
+		height: 30px;
+		width: 30px;
+		transition: fill 0.75s $easeOutExpo, transform 0.75s $easeOutExpo;	
+		fill: $main-color;
+		&:hover {
+			fill: $second-color;
+			transform: translate(0, -5px);
+		}	
+	}
+}
+
+.homepage-section-social-flower {
+	height: 116px;
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 80px;
+	&:before, &:after {
+		content:"";
+		display: block;
+		position: absolute;
+		top: 50%;
+		height: 1px;
+		width: 200px;
+		background-color: $light-gray;
+	}
+	&:before {
+		right: 0;
+	}
+	&:after {
+		left: 0;
+	}
+}
+
+.homepage-section-social-flower-img {
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, 0);
+}
+
+
+
+
+.homepage-footer {
+	background-color: $main-color-dark;
+	color: $main-color;
+	text-align: center;
+	padding: 20px 0;
+	margin-top: 100px;
+	font-size: 14px;
+	a {
+		transition: color 0.5s $easeInOutQuart;
+		&:hover {
+			color: $main-color-light;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.block-button-logout {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.icon-logout {
+	width: 100%;
+	height: 100%;
+	transition: color 0.5s $easeInOutQuad, transform 0.5s $easeOutQuart, opacity 0.5s $easeInOutQuad;
+	color: $main-color;
+	&:hover {
+		color: $text-color;
+		transform: scale(0.93);
+		opacity: 0.5;
+	}
+}

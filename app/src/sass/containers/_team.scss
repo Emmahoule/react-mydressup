@@ -1,0 +1,34 @@
+.team {
+	background-color: $white;
+}
+
+.page-section-team-text-title {
+	text-align: center;
+}
+
+.page-section-team-item {
+	display: inline-block;
+	width: 25%;
+	// text-align: center;
+	padding: 80px 25px;
+	text-align: center;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.page-section-team-item-name {
+	font-family: $title-font;
+	color: $main-color;
+	font-weight: 600;
+	margin-top: 20px;
+}
+
+.page-section-team-item-post {
+	// font-family: $title-font;
+	font-style: italic;
+}
+
+.page-section-team-item-text {
+	margin-top: 20px;
+	text-align: center;
+}
